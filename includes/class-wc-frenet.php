@@ -354,13 +354,17 @@ class WC_Frenet extends WC_Shipping_Method {
 
         if ( $date > 0 ) {
 
-            $entrega_prevista = get_data_entrega_prevista($date);
+            $margem = 1;
+            if (strpos($name, "Sedex" )!== false || strpos($name, "Jadlog") !== false)
+                $margem = 3;
+
+            $entrega_prevista = get_data_entrega_prevista($date, $margem);
             $prevista=$entrega_prevista[0];
             $prevista_margem=$entrega_prevista[1];
-            $name .= "\nEntrega prevista entre $prevista e $prevista_margem";
-            /*
-            $name .= ' (' . sprintf( _n( 'Delivery in %d working day', 'Delivery in %d working days', $date, 'woo-shipping-gateway' ),  $date ) . ')';
-            */
+            $name .= " | Entrega prevista entre $prevista e $prevista_margem";
+            
+            #$name .= ' (' . sprintf( _n( 'Delivery in %d working day', 'Delivery in %d working days', $date, 'woo-shipping-gateway' ),  $date ) . ')';
+            
 
         }
         
