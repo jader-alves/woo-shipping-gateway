@@ -358,6 +358,10 @@ class WC_Frenet extends WC_Shipping_Method {
             if (strpos($name, "Sedex" )!== false || strpos($name, "Jadlog") !== false)
                 $margem = 3;
 
+            
+
+
+
             $entrega_prevista = get_data_entrega_prevista($date, $margem);
             $prevista=$entrega_prevista[0];
             $prevista_margem=$entrega_prevista[1];
@@ -367,7 +371,9 @@ class WC_Frenet extends WC_Shipping_Method {
             
 
         }
-        
+
+        $name = str_replace(" (03220)", "", $name );            
+                
         return $name;
     }
 
