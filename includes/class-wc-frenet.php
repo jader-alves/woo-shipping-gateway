@@ -358,22 +358,20 @@ class WC_Frenet extends WC_Shipping_Method {
             if (strpos($name, "Sedex" )!== false || strpos($name, "Jadlog") !== false)
                 $margem = 3;
 
-            
-
-
 
             $entrega_prevista = get_data_entrega_prevista($date, $margem);
             $prevista=$entrega_prevista[0];
             $prevista_margem=$entrega_prevista[1];
-            $name .= " | Entrega prevista entre $prevista e $prevista_margem";
+            $name .= " | Entrega prevista entre $prevista e $prevista_margem TESTE TESTE";
             
             #$name .= ' (' . sprintf( _n( 'Delivery in %d working day', 'Delivery in %d working days', $date, 'woo-shipping-gateway' ),  $date ) . ')';
             
 
         }
 
-        $name = str_replace(" (03220)", "", $name );            
-                
+        $name = str_replace(" (03220)", "", $name );         
+       
+
         return $name;
     }
 
