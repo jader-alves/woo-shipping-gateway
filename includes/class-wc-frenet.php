@@ -369,7 +369,10 @@ class WC_Frenet extends WC_Shipping_Method {
 
         }
 
-        $name = str_replace(" (03220)", "", $name );         
+        $name .= " | TESTE TESTE";
+
+        $name = str_replace(" Contrato (03220)", "", $name );         
+        
        
 
         return $name;

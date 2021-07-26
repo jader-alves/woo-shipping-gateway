@@ -3,7 +3,7 @@
  * Plugin Name: Frenet Shipping Gateway for WooCommerce
  * Plugin URI: https://github.com/FrenetGatewaydeFretes/woo-shipping-gateway
  * Description: Frenet para WooCommerce
- * Author: Rafael Mancini | Customizado por Jader Alves
+ * Author: Rafael Mancini | Customizado por Jader Alves v.0.1
  * Author URI: http://www.frenet.com.br
  * Version: 2.1.10
  * License: GPLv2 or later
