@@ -362,7 +362,7 @@ class WC_Frenet extends WC_Shipping_Method {
             $entrega_prevista = get_data_entrega_prevista($date, $margem);
             $prevista=$entrega_prevista[0];
             $prevista_margem=$entrega_prevista[1];
-            $name .= " | Entrega prevista entre $prevista e $prevista_margem TESTE TESTE";
+            $name .= " | Entrega prevista entre $prevista e $prevista_margem";
             
             #$name .= ' (' . sprintf( _n( 'Delivery in %d working day', 'Delivery in %d working days', $date, 'woo-shipping-gateway' ),  $date ) . ')';
             
