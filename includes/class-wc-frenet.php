@@ -368,6 +368,7 @@ class WC_Frenet extends WC_Shipping_Method {
         }
 
         $name = str_replace(" Contrato (03220)", "", $name );         
+        $name = str_replace("Frenet Jadlog.Package", "Jadlog", $name );
         
         return $name;
     }
